@@ -279,15 +279,15 @@ CLI-->>User : 显示配置完成信息
 
 ```mermaid
 flowchart TD
-A[init/update命令] --> B[调用AgentsStandardConfigurator.configure]
-B --> C[TemplateManager.getAgentsStandardTemplate()]
-C --> D[获取agents-root-stub模板]
-D --> E[确定AGENTS.md文件路径]
-E --> F[检查文件是否存在]
-F --> |存在| G[使用标记更新内容]
-F --> |不存在| H[创建新文件并写入内容]
-G --> I[完成]
-H --> I
+    A["init/update命令"] --> B["调用AgentsStandardConfigurator.configure"]
+    B --> C["TemplateManager.getAgentsStandardTemplate()"]
+    C --> D["获取agents-root-stub模板"]
+    D --> E["确定AGENTS.md文件路径"]
+    E --> F["检查文件是否存在"]
+    F --> |存在| G["使用标记更新内容"]
+    F --> |不存在| H["创建新文件并写入内容"]
+    G --> I["完成"]
+    H --> I
 ```
 
 **Diagram sources**
